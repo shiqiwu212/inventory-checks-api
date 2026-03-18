@@ -36,7 +36,7 @@ This project uses 3 core AWS services:
 3. **Amazon DynamoDB**
    - stores inventory check records in a table
 
-### Additional AWS Service Used for Debugging
+## Additional AWS Service Used for Debugging
 - **CloudWatch Logs**
   - used to view Lambda execution logs and troubleshoot errors
 
@@ -44,16 +44,6 @@ This project uses 3 core AWS services:
 
 ### 1. Create an inventory check
 **POST** `/inventory-checks`
-
-Example request body:
-```json
-{
-  "item_id": "SKU-1001",
-  "location": "Warehouse A",
-  "counted_qty": 25,
-  "note": "Initial test count",
-  "counted_by": "Shiqi"
-}
 
 Example request body:
 ```json
