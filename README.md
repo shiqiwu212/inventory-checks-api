@@ -54,3 +54,11 @@ Example request body:
   "note": "Initial test count",
   "counted_by": "Shiqi"
 }
+
+## Demo Screenshots
+
+### DynamoDB item stored successfully
+![DynamoDB item stored successfully](dynamodb-items-success.png)
+
+### Postman GET request returned successfully
+![Postman GET request returned successfully](postman-get-success.png)
