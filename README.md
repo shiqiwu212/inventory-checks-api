@@ -55,10 +55,12 @@ Example request body:
   "counted_by": "Shiqi"
 }
 
-## Demo Screenshots
-
-### DynamoDB item stored successfully
-![DynamoDB item stored successfully](dynamodb-items-success.png)
-
-### Postman GET request returned successfully
-![Postman GET request returned successfully](postman-get-success.png)
+Example request body:
+```json
+{
+  "item_id": "SKU-1001",
+  "location": "Warehouse A",
+  "counted_qty": 25,
+  "note": "Initial test count",
+  "counted_by": "Shiqi"
+}
