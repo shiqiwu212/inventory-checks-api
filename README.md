@@ -46,6 +46,7 @@ This project uses 3 core AWS services:
 **POST** `/inventory-checks`
 
 Example request body:
+
 ```json
 {
   "item_id": "SKU-1001",
@@ -54,55 +55,3 @@ Example request body:
   "note": "Initial test count",
   "counted_by": "Shiqi"
 }
-
-### 2. Retrieve an inventory check by ID
-**GET** `/inventory-checks/{check_id}`
-
-Example:
-`GET /inventory-checks/fb080e19-3972-4080-b770-136e00e781e4`
-
-## DynamoDB Table Design
-**Table name:** `InventoryChecks`  
-**Partition key:** `check_id` (String)
-
-Example attributes:
-- check_id
-- item_id
-- location
-- counted_qty
-- note
-- counted_by
-- created_at
-
-## High-Level Flow
-1. The client sends a request to API Gateway.
-2. API Gateway invokes the Lambda function.
-3. Lambda processes the request.
-4. Lambda writes to or reads from DynamoDB.
-5. The response is returned as JSON.
-
-## Demo Summary
-This project was tested successfully with Postman.
-
-### POST test
-A new inventory check record was created successfully.
-
-### GET test
-The same inventory check record was retrieved successfully by `check_id`.
-
-## Demo Screenshots
-
-### DynamoDB item stored successfully
-![DynamoDB item stored successfully](dynamodb-items-success.png)
-
-### Postman GET request returned successfully
-![Postman GET request returned successfully](postman-get-success.png)
-
-## Repository Contents
-This repository includes:
-- README.md
-- Lambda function code
-- project explanation and test flow
-
-## Notes
-No secrets, API keys, or credentials are included in this repository.
